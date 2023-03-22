@@ -54,11 +54,11 @@ data = mmcv.load(info_path, file_format='pkl')
 info_data = list(sorted(data['infos'], key=lambda e: e['timestamp']))
 
 '''Load results from lidar detections'''
-prediction_path = "./tools/fusion_open/lidar_results/prediction_filter_by_dis.pkl"
+prediction_path = './tools/fusion_open/lidar_results/prediction_filter_by_dis.pkl'
 res3d_fusion = load(prediction_path)
 
 '''Load 2D detections from YOLOV7 or DINO'''
-res2d_dir = './tools/fusion_open/camera_results/DINO/nuscenes_nuimages/''
+res2d_dir = './tools/fusion_open/camera_results/DINO/nuscenes_nuimages/'
 
 def check_point_in_img(points, height, width):
     valid = np.logical_and(points[:, 0] >= 0, points[:, 1] >= 0)

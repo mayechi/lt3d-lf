@@ -54,7 +54,7 @@ data = mmcv.load(info_path, file_format='pkl')
 info_data = list(sorted(data['infos'], key=lambda e: e['timestamp']))
 
 '''Load results from lidar detections'''
-prediction_path = "./tools/fusion_open/lidar_results/prediction_filter_by_dis.pkl"
+prediction_path = './tools/fusion_open/lidar_results/prediction_filter_by_dis.pkl'
 res3d_fusion = load(prediction_path)
 
 '''Load 2D detections from YOLOV7 or DINO'''
