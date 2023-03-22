@@ -54,12 +54,11 @@ data = mmcv.load(info_path, file_format='pkl')
 info_data = list(sorted(data['infos'], key=lambda e: e['timestamp']))
 
 '''Load results from lidar detections'''
-prediction_path = "./results/prediction_filter_by_dis.pkl"
+prediction_path = "./tools/fusion_open/lidar_results/prediction_filter_by_dis.pkl"
 res3d_fusion = load(prediction_path)
 
 '''Load 2D detections from YOLOV7 or DINO'''
-# res2d_dir = './detect/exp7/labels/'
-res2d_dir = './detect/detr/labels1/'
+res2d_dir = './tools/fusion_open/camera_results/DINO/nuscenes_nuimages/'
 
 def check_point_in_img(points, height, width):
     valid = np.logical_and(points[:, 0] >= 0, points[:, 1] >= 0)
@@ -273,8 +272,9 @@ def make_fine_fusion(iou_thresh, score_cal_times, lidar_no_match_times):
                         if fusion_flag[index_3d] == True:
                             if fusion_score > res3d_fusion[info_index]['pts_bbox']['scores_3d'][index_3d]:
                                 '''if calibrating, you should comment out them'''
-                                res3d_fusion[info_index]['pts_bbox']['scores_3d'][index_3d] = fusion_score
-                                res3d_fusion[info_index]['pts_bbox']['labels_3d'][index_3d] = classes.index(fusion_name)
+                                # res3d_fusion[info_index]['pts_bbox']['scores_3d'][index_3d] = fusion_score
+                                # res3d_fusion[info_index]['pts_bbox']['labels_3d'][index_3d] = classes.index(fusion_name)
+                                pass
                         else:                           
                             res3d_fusion[info_index]['pts_bbox']['scores_3d'][index_3d] = fusion_score
                             res3d_fusion[info_index]['pts_bbox']['labels_3d'][index_3d] = classes.index(fusion_name)

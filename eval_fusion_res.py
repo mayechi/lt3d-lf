@@ -123,12 +123,12 @@ def evaluate_single(result_path,
             aps = metrics["label_aps"][classname]
 
             l0 = [aps["0.5/0"], aps["1.0/0"], aps["2.0/0"], aps["4.0/0"]]
-            # l1 = [aps["1.0/1"], aps["0.5/1"], aps["2.0/1"], aps["4.0/1"]]
-            # l2 = [aps["0.5/2"], aps["1.0/2"], aps["2.0/2"], aps["4.0/2"]]
+            l1 = [aps["1.0/1"], aps["0.5/1"], aps["2.0/1"], aps["4.0/1"]]
+            l2 = [aps["0.5/2"], aps["1.0/2"], aps["2.0/2"], aps["4.0/2"]]
             
             detection_dataFrame["LCA0"].append(np.mean(l0))
-            # detection_dataFrame["LCA1"].append(np.mean(l1))
-            # detection_dataFrame["LCA2"].append(np.mean(l2))
+            detection_dataFrame["LCA1"].append(np.mean(l1))
+            detection_dataFrame["LCA2"].append(np.mean(l2))
     else:
         assert False, "{} is Invalid".format(metric_type)
 
