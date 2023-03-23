@@ -27,3 +27,5 @@ python tools/fusion/main.py
 ```shell
 python get_LCA0_mmf.py
 ```
+
+7.The 'cal.py' script contain some calibrations by different 3D (e.g. Centerpoint) and 2D detections (e.g. DINO) that have calibrated by me.
