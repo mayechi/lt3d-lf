@@ -223,7 +223,7 @@ def make_fine_fusion(iou_thresh, score_cal_times, lidar_no_match_times):
                                             thickness=scale_factor) 
 
             if show:
-                cv2.imwrite("./results/img_show_paper_better/"+infos['token']+"&"+view+".jpg", img)
+                cv2.imwrite("./results/"+infos['token']+"&"+view+".jpg", img)
             
             '''Math and cal IOU'''
             if get_2d:
