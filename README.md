@@ -1,4 +1,4 @@
-# The Devil is in the Details: RGB-LiDAR Late Fusion for Long-Tailed 3D Detection
+# LONG-TAILED 3D DETECTION VIA 2D LATE FUSION
 Late Fusion for LiDAR and RGB detections.
 
 ## Get started
