@@ -1,6 +1,6 @@
-from tools.fusion_open.make_fine_fusion_res_pkl_tune import make_fine_fusion
-from tools.fusion_open.eval_fusion_res_tune import eval_fusion
-from tools.fusion_open.get_LCA0 import LCA0
+from tools.fusion.make_fine_fusion_res_pkl_tune import make_fine_fusion
+from tools.fusion.eval_fusion_res_tune import eval_fusion
+from tools.fusion.get_LCA0 import LCA0
 
 eval_cls_list = ['car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle', 'motorcycle', 'emergency_vehicle',
                  'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility', 
